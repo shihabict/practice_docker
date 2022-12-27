@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  docker_container_1:
+    container_name: container_1
+    build:
+      context: ./container_1
+      dockerfile: Dockerfile
+  docker_container_2:
+    container_name: container_2
+    build:
+      context: ./container_2
+      dockerfile: Dockerfile
