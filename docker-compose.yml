@@ -6,6 +6,8 @@ services:
     build:
       context: ./container_1
       dockerfile: Dockerfile
+    volumes:
+      - /home/shihab/Projects:/projects
   docker_container_2:
     container_name: container_2
     build:

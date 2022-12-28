@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 
 app = Flask(__name__)
@@ -11,6 +12,10 @@ def index():
 @app.route('/hi')
 def say_hello():
     return 'Hello from Server'
+
+@app.route('/data')
+def show_number_of_folders():
+    return f"{len(os.listdir('/projects'))} folder exist in projects dir"
 
 
 if __name__ == '__main__':
