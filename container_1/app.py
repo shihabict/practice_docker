@@ -13,7 +13,7 @@ def index():
 def say_hello():
     return 'Hello from Server'
 
-@app.route('/data')
+@app.route('/folders')
 def show_number_of_folders():
     return f"{len(os.listdir('/projects'))} folder exist in projects dir"
 
