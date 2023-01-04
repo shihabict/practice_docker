@@ -1,5 +1,6 @@
 logs/
 venv/
+mysql/
 __pycache__/
 .git
 *.md

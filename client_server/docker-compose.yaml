@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  website:
+    image: nginx
+    ports:
+      - "8081:80"
+    restart: always
+
+  website2:
+    image: nginx
+    ports:
+      - "8082:80"
+    restart: always
+    networks:
+      client:
+        ipv4_address: 192.168.200.21
+
+networks:
+  client:
+    ipam:
+      driver: default
+      config:
+        - subnet: "192.168.200.0/24"
+
+
+
+
